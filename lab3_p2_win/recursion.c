@@ -21,13 +21,13 @@ int num_digits(int n)
 /* Exercise 5. Return x raised to the power n for n >= 0. */
 double power2(double x, int n)
 {
-    double halfPower = power2(x, n / 2);
-
     if (n == 0)
     {
         return 1;
     }
-    else if (n % 2 == 0)
+    
+    double halfPower = power2(x, n / 2);
+    if (n % 2 == 0)
     {
         return halfPower * halfPower;
     }
